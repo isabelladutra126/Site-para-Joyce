@@ -1,0 +1,91 @@
+.container {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo da página fique acima das ondas */
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #3d484e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #000000; /* Azul */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #b5c7d1; /* Azul claro */
+}
+
+/* Ajuste de tamanho para a caixa de texto do conteúdo do desenho */
+textarea {
+    height: 150px; /* Altura maior */
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+
+input[type="submit"] {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    text-decoration-color: #000000;
+    background-color: #ffffff; /* Verde turquesa */
+    color: #000000; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Tornar o botão um bloco */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    
+}
+
+.box {
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px; /* Defina o tamanho da caixa conforme necessário */
+    margin: 0 auto; /* Centraliza a caixa horizontalmente */
+  }
+
+
+.pedido {
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.informacoes {
+  margin-left: 20px;
+}
+
+.numero-pedido {
+  color: #0257b1;
+}
+
+.data-pedido {
+  font-style: italic;
+}

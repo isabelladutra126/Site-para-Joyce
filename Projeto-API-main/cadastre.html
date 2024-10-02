@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/cadastre.css">
+    <link rel="website icon" type="png" href="icon/pessoa.png">
+    <title>Cadastre-se</title>
+</head>
+<header class="main-header">
+    <div class="logo">
+        <img src="fotos/logo.jpeg" alt="Adesivos" class="img_logo_header">
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar...">
+        <button type="submit">Buscar</button>
+    </div>
+    <div class="brand-name">
+        <a href="login.html"><h2>Login</h2></a>
+        <a href="encomendas.html">
+            <i class='bx bx-cart cart-icon'></i>
+        </a>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <h1>Login de Usuário</h1>
+        <form method="#" action="#" onsubmit="Cadastrarse(event)">
+            <label for="nome">Nome:</label>
+            <p><input type="text" name="nome" placeholder="Nome" required></p>
+            <label for="sobrenome">Sobrenome:</label>
+            <p><input type="text" name="sobrenome" placeholder="Sobrenome" required></p>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" name="nascimento" placeholder="nascimento" required><br><br>
+            <label for="email">Email:</label>
+            <p><input type="email" name="email" placeholder="Email"></p>
+            <input type="tel" name="celular" id="celularInput" placeholder="Número de Celular (com DDD)">
+            <label for="senha">Senha:</label>
+            <p><input type="password" name="senha" id="senhaInput" required placeholder="Senha"></p>
+            <label for="confirma_senha">Confirmar Senha:</label>
+            <p><input type="password" name="confirma_senha" id="senhasInput" required placeholder="Confirma Senha"></p>
+            <input type="checkbox" id="mostrarSenha"> Mostrar Senha
+            <p><input type="submit" value="Cadastrar-se" name="crud"></p>
+        </form>
+    </div>
+    <br><br>
+
+    <script>
+        function Cadastrarse(event) {
+            event.preventDefault();
+            alert("Cadastrado com Sucesso");
+            window.location.href = "login.html";
+        }        
+
+        const celularInput = document.getElementById("celularInput");
+
+        celularInput.addEventListener("input", function() {
+            const celular = celularInput.value;
+            const ddd = celular.substring(0, 2); 
+
+            const dddsValidos = ['11', '12', '13', '14', '15', '16', '17', '18', '19', '21', '22', '24', '27', '28', '31', '32', '33', '34', '35', '37', '38', '41', '42', '43', '44', '45', '46', '47', '48', '49', '51', '53', '54', '55', '61', '62', '63', '64', '65', '66', '67', '68', '69', '71', '73', '74', '75', '77', '79', '81', '82', '83', '84', '85', '86', '87', '88', '89', '91', '92', '93', '94', '95', '96', '97', '98', '99'];
+            const dddValido = dddsValidos.includes(ddd);
+
+            if (dddValido) {
+                celularInput.setCustomValidity("");
+            } else {
+                celularInput.setCustomValidity("Por favor, insira um DDD válido.");
+            }
+        });
+
+        const senhaInput = document.getElementById("senhaInput");
+        const confirmaSenhaInput = document.getElementById("senhasInput");
+        const mostrarSenhaCheckbox = document.getElementById("mostrarSenha");
+
+        mostrarSenhaCheckbox.addEventListener("change", function () {
+            if (mostrarSenhaCheckbox.checked) {
+                senhaInput.type = "text";
+                confirmaSenhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+                confirmaSenhaInput.type = "password";
+            }
+        });
+    </script>
+</body>
+</html>

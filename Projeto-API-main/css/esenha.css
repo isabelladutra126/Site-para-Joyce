@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(129, 136, 130);
+}
+
+.main-header {
+    background-color: #413f3f;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.main-header .logo {
+    flex: 1;
+}
+
+.main-header .logo img {
+    max-width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.main-header .search-bar {
+    flex: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.main-header .search-bar input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    color: #fff;
+    background-color: #fff;
+}
+
+.main-header .search-bar button {
+    padding: 8px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8%;
+}
+
+.main-header .brand-name {
+    flex: 1;
+    text-align: right;
+}
+
+.main-header .brand-name h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.img_logo_header {
+    width: 50px;
+    border-radius: 30px;
+}
+
+.brand-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name a{
+    text-decoration: none;
+}
+
+.brand-name h2{
+    color: #fff;
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+.brand-name i{
+    margin-right: 25px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #fff;
+}
+
+.brand-name i:hover{
+    transform: translateY(-5px);
+    color: rgb(32, 32, 221);
+}
+
+.container {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px; /* Use max-width for responsiveness */
+    width: 90%; /* Adjust the width for smaller screens */
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: rgb(188, 190, 190);
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+input[type="email"] {
+    width: 300px; /* Defina o tamanho desejado conforme necessário */
+}
+
+@media screen and (max-width: 600px) {
+    /* Adjust styles for screens with a maximum width of 600px */
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+.btn-2 button a{
+text-decoration: none;
+color: black;
+}
+
+.btn-2 button{
+    background-color: #ac9e9e;
+    border: #ccc;
+    flex: 1;
+    margin: 0 10px
+}
+
+.btn-2{
+    display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px; /* Ajuste conforme necessário */
+            margin-top: 10px;
+}
